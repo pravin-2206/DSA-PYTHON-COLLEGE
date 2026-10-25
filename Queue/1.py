@@ -10,8 +10,14 @@ class Queue:
                 return front
 q=Queue()
 print("list of Queues")
-q.enqueue(1)
+q.enqueue(1) # add 1 in queue
 q.enqueue(2)
 q.enqueue(3)
-print(q.values)
+print(q.values) # display list of elements in queue
+
+print("dequeue operations:")
+
+print(q.dequeue())  # delete first element of queue
+
+print(q.values)  # remainig values display
 
