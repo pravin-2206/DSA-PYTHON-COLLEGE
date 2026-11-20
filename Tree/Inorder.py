@@ -19,6 +19,7 @@
 
 
 
+
 class Node:
     def __init__(self, value):
         self.left = None
@@ -96,6 +97,7 @@ b1.preorder(b1.root)
 
 print("\nPostorder:")
 b1.postorder(b1.root)
+
 
   
                 
