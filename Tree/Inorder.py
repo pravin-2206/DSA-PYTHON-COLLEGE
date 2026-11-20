@@ -18,6 +18,7 @@
 #Binary search tree using linked list
 
 
+
 class Node:
     def __init__(self, value):
         self.left = None
@@ -49,14 +50,32 @@ class BST:
                     else:
                         temp = temp.right
 
-    # Inorder Traversal
+    # Inorder: Left, Root, Right
     def inorder(self, rt):
         if rt is None:
             return
-        else:
-            self.inorder(rt.left)
-            print(rt.data, end=" ")
-            self.inorder(rt.right)
+
+        self.inorder(rt.left)
+        print(rt.data, end=" ")
+        self.inorder(rt.right)
+
+    # Preorder: Root, Left, Right
+    def preorder(self, rt):
+        if rt is None:
+            return
+
+        print(rt.data, end=" ")
+        self.preorder(rt.left)
+        self.preorder(rt.right)
+
+    # Postorder: Left, Right, Root
+    def postorder(self, rt):
+        if rt is None:
+            return
+
+        self.postorder(rt.left)
+        self.postorder(rt.right)
+        print(rt.data, end=" ")
 
 
 b1 = BST()
@@ -69,7 +88,15 @@ b1.insert(Node(13))
 b1.insert(Node(1))
 b1.insert(Node(3))
 
+print("Inorder:")
 b1.inorder(b1.root)
+
+print("\nPreorder:")
+b1.preorder(b1.root)
+
+print("\nPostorder:")
+b1.postorder(b1.root)
+
   
                 
                 
